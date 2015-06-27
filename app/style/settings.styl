@@ -103,6 +103,12 @@ round()
   border-radius 500px
   overflow hidden
 
+container($maxwidth = '1200px')
+  position relative
+  margin 0 auto
+  max-width $maxwidth
+  padding 0 2rem
+
 icon(code = ' ')
   content: code
   display: inline-block

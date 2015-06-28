@@ -6,7 +6,8 @@ global-reset()
 
 // common classes
 .container
-  container()
+  container(1000px)
+  padding 0 2rem
 
 // end common classes
 
@@ -14,61 +15,159 @@ global-reset()
   box-sizing border-box
 
 body
-  font-size 16px
-  .main
+  regular 16px 22px
+  &.main
     background url(/bg.jpg) center center no-repeat
     background-size cover
+    background-attachment fixed
 
-  .first
-    width 100%
-    height 100%
-    height 100vh
-    min-height 400px
-    .logo
-      position absolute
-      top 30px
-      left 40px
-      background url(/iris3.svg) left center no-repeat
-      background-size auto 100%
-      padding-left 2.5rem
-      padding-top 0.5rem
-      bold 3rem 3rem
+    .first
+      width 100%
+      height 100%
+      height 100vh
+      min-height 400px
+      .logo
+        position absolute
+        top 30px
+        left 40px
+        background url(/iris3.svg) left center no-repeat
+        background-size auto 100%
+        padding-left 2.5rem
+        padding-top 0.5rem
+        bold 3rem 3rem
 
-      color #fff
+        color #fff
 
-      shadow()
+        shadow()
 
-    .phone
-      position absolute
-      top 2rem
-      right 3rem
-      cursor pointer
-      shadow()
-      .callback
-        medium 1rem 4rem
+
+
+      .menu
+
+        position absolute
+        top 2rem
+        right 3rem
+        cursor pointer
+        a, a:visited
+          color white
+          text-decoration none
+          margin-right 1.1rem
+          regular 1.1rem 3rem
+          opacity 0.8
+          transition opacity 0.1s ease
+          padding 0.3rem
+          &:hover
+            opacity 1
+
+        shadow()
+        .callback
+          display inline-block
+          medium 1rem 3rem
+          color white
+          cursor pointer
+          transition transform 0.1s ease
+          &:hover
+            transform scale(1.1)
+          &:before
+            icon "\f4b9"
+            border 1px solid white
+            size 3rem
+            text-align center
+            border-radius 500px
+            font-size 2rem
+            vertical-align bottom
+            line-height 3rem
+            margin-right 0.5rem
+
+
+      .slogan
         color white
-        &:before
-          icon "\f4b9"
-          font-size 1.8rem
-          vertical-align bottom
-          line-height 4rem
-          margin-right 0.5rem
+        position absolute
+        width 60%
+        top 45%
+        left 50%
+        transform translate(-50%,-50%)
+        .h2
+          thin 3rem 4rem
+          text-align center
+          text-transform uppercase
+          shadow()
+          margin-bottom 1.5rem
+        .h3
+          text-align center
+          medium 1rem 1.4rem
+          shadow()
+
+    .second
+      background white
+      padding 4rem 0
+      .header
+        regular 3rem 3.2rem
+        padding-bottom 1rem
+      .text
+        regular 1rem 1.7rem
+
+        margin 0 0 1.2rem 0
+        p
+          margin-bottom 1.2rem
+          color #6a6a6a
+
+    .third
+      padding 5rem 0 10rem 0
+      background url(/third.jpg) center center no-repeat fixed
+      background-size cover
+      .header
+        regular 3rem 8rem
+        padding 1rem 0 2.6rem 0
+        color white
+        text-align center
+
+      .service
+        flexy row nowrap
+        justify space-between flex-start
+        color white
+        &-item
+          flex 0 0 280px
+          margin 0 20px
+          flexy column nowrap
+          justify flex-start center
+          &-icon
+            flex 0 0 5rem
+            &:before
+              font-size 4rem
+              line-height 5rem
+            &.case
+              &:before
+                icon "\f26c"
+            &.delivery
+              &:before
+                font-size 4.6rem
+                icon "\f3ec"
+            &.teach
+              &:before
+                icon "\f149"
+
+          &-name
+            medium 1.2rem 1.2rem
+            padding 1.1rem 0
+            shadow()
+
+          &-text
+            regular 0.85rem 1.4rem
+            text-align center
+            opacity 0.8
 
 
-    .slogan
-      color white
-      position absolute
-      width 60%
-      top 45%
-      left 50%
-      transform translate(-50%,-50%)
-      .h2
-        thin 3rem 4rem
-        text-align center
-        text-transform uppercase
-        shadow()
-        margin-bottom 1.5rem
-      .h3
-        text-align center
-        medium 1rem 1.4rem
-        shadow()
+
+    .fourth
+      background white
+      height 400px
+
+
+
+
+
+
+
+
+

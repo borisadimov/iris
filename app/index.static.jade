@@ -3,7 +3,7 @@ head
   meta(name="viewport" content="width=device-width")
   link(rel="stylesheet" href="stylesheets/app.css")
   meta(charset="utf-8")
-  title Prototype
+  title Ирис
 
   script(src="javascripts/vendor.js")
   script(src="javascripts/app.js")
@@ -31,15 +31,65 @@ body.main
       .h3
         | Профессиональная лечебная косметика  для косметологов и врачей
 
-
+    .intro__arrow
+      i.intro__arrow__inner.intro-animation
   .second
     .container
       .header
-        | О Нас
+        | О НАС
       .text
         p
           | Компания «Ирис» начала свою деятельность по продвижению на Ростовский рынок лучших достижений мировой косметологии и эстетической медицины с 1997 года.
           | Основное направление эксклюзивная дистрибуция профессиональных косметических марок для предприятий индустрии красоты.
+  .slider.block
+    .container
+      .promo_blocks
+        .block
+          img(src="../banner/peel1gk-is-99.jpg")
+        .block
+          img(src="../banner/o2gk-is-99.jpg")
+        .block
+          img(src="../banner/mezotergk-is-99.jpg")
+        .block
+          img(src="../banner/abiggk-is-99.jpg")
+  .our-products
+    .container
+      .header
+        p.title Наша продукция
+        p.sub-title Высококачественные профессиональные косметические средства.
+      .products 
+        .product
+          .inner
+            .background
+            a(href="#") 
+            p Линии по уходу
+        .product
+          .inner
+            .background
+            a(href="#")
+            p Инъекционные препараты
+        .product
+          .inner
+            .background
+            a(href="#")
+            p Спа и талассо-терапия
+        .product
+          .inner
+            .background
+            a(href="#")
+            p Оборудование
+        .product
+          .inner
+            .background
+            a(href="#")
+            p Трихологические средства
+        .product
+          .inner
+            .background
+            a(href="#")
+            p Химические пилинги 
+
+
   .third
     .container
       .header
@@ -66,5 +116,31 @@ body.main
             | Выберите интересующие семинары по косметологии, нажимая на кнопку  "Записаться на семинар". Можно выбирать их и из разных разделов.
 
   .fourth
+    .container
+      .header
+        | Отзывы
+      .service
+        .service-item
+          .service-item-icon
+            img(src="/testimonial_31-190x190.jpg")
+          .service-item-name
+            | Фёдор Казаков
+          .service-item-text
+            p “In at accumsan risus. Nam id volutpat ante. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vel mi mattis, vulputate nunc nec, sodales nibh. In ultricies sit amet, hendrerit in lorem at accumsan risus.”
+        .service-item
+          .service-item-icon
+            img(src="/testimonial_22-190x190.jpg")
+          .service-item-name
+            | Валерий Субботин
+          .service-item-text
+            p “In at accumsan risus. Nam id volutpat ante. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vel mi mattis, vulputate nunc nec, sodales nibh. In ultricies sit amet, hendrerit in lorem at accumsan risus.”
+        .service-item
+          .service-item-icon
+            img(src="/testimonial_11-190x190.jpg")
+          .service-item-name
+            | Виктория Алексеева
+          .service-item-text
+            p “In at accumsan risus. Nam id volutpat ante. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vel mi mattis, vulputate nunc nec, sodales nibh. In ultricies sit amet, hendrerit in lorem at accumsan risus.”
+
 
 

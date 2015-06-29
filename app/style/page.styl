@@ -1,0 +1,67 @@
+@import 'nib'
+@import 'settings'
+
+
+body 
+  &.page
+    background url('/network.jpg') left center no-repeat
+    background-size cover
+    height 100vh
+    overflow hidden
+    .back-button
+      position relative
+      z-index 55
+      .back
+        light 2rem 2.5rem
+        vertical-align top
+        width 15%
+        margin-top 45px
+        margin-left 35px
+        position fixed
+        
+        &:before 
+          content '<'
+          font-size 25px
+          padding-right 15px
+          vertical-align top
+          color #fff
+          
+        a
+          text-decoration none
+          color #fff
+    .container
+      color #fff
+      overflow-x auto
+      height 100%
+      .content
+        display inline-block
+        width 80%
+        margin-left 200px
+        background rgba(0,0,0,0.1)
+        padding 3.2rem 0
+        h1 
+          padding 0 2.5rem
+          medium 2.1rem 3rem
+          font-family 'Roboto', sans-serif
+          padding-bottom 15px
+          
+        .flex-container
+          padding-left 2.5rem
+          margin-top 4.2rem
+          flexy row wrap
+          .place, .price, .coach
+            flex 1
+            light 1.3rem 1.8rem
+            span
+              display block
+              regular 1.7rem 3rem
+              margin 5px 0px 12px 0px
+        .text
+          padding 0 2.5rem
+          margin-top 3rem
+
+          p
+            light 1.4rem 2rem
+            margin-top 4rem
+            shadow()
+            

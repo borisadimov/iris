@@ -7,10 +7,13 @@ head
 
   script(src="javascripts/vendor.js")
   script(src="javascripts/app.js")
+  script(src="https://maps.googleapis.com/maps/api/js?v=3?key=AIzaSyALv14QJCMFIoAqH2JLuGruwxtxCG_IBKk")
 
 
   script.
     require('initialize');
+    require('main');
+
 
 
 body.main
@@ -141,6 +144,23 @@ body.main
             | Виктория Алексеева
           .service-item-text
             p “In at accumsan risus. Nam id volutpat ante. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vel mi mattis, vulputate nunc nec, sodales nibh. In ultricies sit amet, hendrerit in lorem at accumsan risus.”
-
-
+  .form
+    .container
+      form
+        label Имя
+        input(type='text')
+        label Телефон
+        input(type='text')
+        input(type="submit" value="ОТПРАВИТЬ").button
+  .footer
+    .container
+      .left
+        .ad 
+          p Ростова-на-Дону,
+          p ул. Горького, 151
+      .right
+        .email
+          a(href="mailto:iris@gmail.com") iris@gmail.com
+          a(href="tel:+78632962219" class="tel") +7 (863) 296-22-19
+  #map-canvas
 

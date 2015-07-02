@@ -1,6 +1,6 @@
 @import 'nib'
 @import 'settings'
-@import url(http://fonts.googleapis.com/css?family=Roboto:500,700,400)
+// @import url('http://fonts.googleapis.com/css?family=Roboto:500,700,400')
 
 global-reset()
 
@@ -12,7 +12,7 @@ global-reset()
     opacity 1
   }
 }
-      
+
 // common classes
 .container
   container(1000px)
@@ -25,18 +25,28 @@ global-reset()
 
 body
   regular 16px 22px
-  &.main
+
+  .mainbg
     background url(/bg.jpg) center center no-repeat
     background-size cover
-    background-attachment fixed
+    position: fixed
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    z-index: -1
+    transform: translate3d(0,0,0)
+  &.main
+
+    // background-attachment fixed
 
     .first
       width 100%
       height 100%
       height 100vh
       min-height 400px
-      
-      .intro__arrow 
+
+      .intro__arrow
         position absolute
         z-index 99
         bottom 20px
@@ -49,8 +59,8 @@ body
         animation fadeIn 1s
         animation-delay 1s
         animation-fill-mode forwards
-        
-      .intro__arrow__inner 
+
+      .intro__arrow__inner
         position absolute
         left 0
         top 0
@@ -58,35 +68,35 @@ body
         height 100%
         background url('/arrow-bottom.svg') no-repeat 50% 50%
         background-size 43px 24px
-        
+
       .intro-animation
         animation arrow 1s infinite
       .intro-opacity
         opacity 0
         transition 1s
-      @-webkit-keyframes arrow 
-        0% 
+      @-webkit-keyframes arrow
+        0%
         -webkit-transform translateY(0)
         transform translateY(0)
 
-        50% 
+        50%
             -webkit-transform translateY(6px)
             transform translateY(6px)
 
-        100% 
+        100%
             -webkit-transform translateY(0)
             transform translateY(0)
 
-        @keyframes arrow 
-            0% 
+        @keyframes arrow
+            0%
             -webkit-transform translateY(0)
             transform translateY(0)
 
-        50% 
+        50%
             -webkit-transform translateY(6px)
             transform translateY(6px)
 
-        100% 
+        100%
             -webkit-transform translateY(0)
             transform translateY(0)
       .logo
@@ -200,26 +210,26 @@ body
           &:hover
             &:before
               opacity 0.8 !important
-              
+
         .slick-next
           right -90px
           &:before
             icon "\f125"
             padding 11px 4px 9px 6px
-          
+
         .slick-prev
           left -90px
           &:before
             padding 11px 6px 9px 4px
             icon "\f124"
-          
+
         .slick-prev:before, .slick-next:before
           color #fff
           border-radius 500px
           display block
           background #4d4d4d
           opacity 0.2
-          
+
     .our-products
       padding 4rem 0
       background #fff
@@ -301,11 +311,11 @@ body
               top 0
               height 100%
               width 100%
-              
+
             a
               opacity 0
               z-index 55
-              position absolute 
+              position absolute
               display block
               top 0
               left 0
@@ -325,10 +335,10 @@ body
               border 1px #fff solid
               opacity 0
               transition 0.5s
-            
+
     .third
       padding 5rem 0 10rem 0
-      background url(/third.jpg) center center no-repeat fixed
+      background url(/third.jpg) center center no-repeat
       background-size cover
       .header
         medium 3rem 8rem
@@ -400,19 +410,19 @@ body
               width 190px
               height 190px
               round()
-              
+
 
           &-name
             regular 1.2rem 1.2rem
             padding 1.1rem 0
             text-align center
-            
+
 
           &-text
             light 0.85rem 1.4rem
             text-align center
             opacity 0.8
-    .form 
+    .form
       background rgba(0,0,0,.35)
       padding 5em 0 5.5rem 0
       form
@@ -452,15 +462,15 @@ body
             background #fff
             color #000
             transition background 0.3s, color 0.3s
-            
+
     .footer
       padding 3.5rem 0 4rem 0
-      background rgba(129,129,129,.9)
+      background rgba(0,0,0,.8)
       .container
         flexy row wrap
         .left
           flex 1 1 13rem
-          .ad 
+          .ad
             text-align center
             p
               color #fff
@@ -469,7 +479,7 @@ body
               margin-top 0.75rem
               &:first-child
                 margin-top 0
-              
+
         .right
           flex 1 1 13rem
           .email
@@ -485,16 +495,16 @@ body
               &:first-child
                 margin-top 0
 
-                
-    #map-canvas 
-      height 400px
+
+    #map-canvas
+      height 300px
       a[href^="http://maps.google.com/maps"]
         display none !important
-      .gm-style-cc 
+      .gm-style-cc
         display none
 
-      .gmnoprint a, .gmnoprint span 
+      .gmnoprint a, .gmnoprint span
         display none
-      
-      .gmnoprint div 
+
+      .gmnoprint div
         background none !important
